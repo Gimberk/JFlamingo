@@ -1,7 +1,8 @@
-package piece;
+package engine.piece;
 
-import board.Board;
-import board.Tile;
+import engine.board.Board;
+import engine.board.BoardUtil;
+import engine.board.Tile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,13 @@ public class King extends Piece{
         int start = tile.index;
 
         for (int direction : directions){
+            if (direction == -1 || direction == -9 || direction == 7){
+                if (BoardUtil.firstFile(tile)) continue;
+            }
+            else if (direction == 1 || direction == 9 || direction == -7){
+                if (BoardUtil.eighthFile(tile)) continue;
+            }
+
             int end = start + direction;
             if (end > 63 || end < 0) continue;
 

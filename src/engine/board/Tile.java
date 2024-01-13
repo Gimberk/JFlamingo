@@ -1,7 +1,6 @@
-package board;
+package engine.board;
 
-import piece.King;
-import piece.Piece;
+import engine.piece.Piece;
 
 public class Tile {
     public final int index;

@@ -1,7 +1,7 @@
-package piece;
+package engine.piece;
 
-import board.Board;
-import board.Tile;
+import engine.board.Board;
+import engine.board.Tile;
 
 import java.util.List;
 

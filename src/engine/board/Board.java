@@ -1,6 +1,6 @@
-package board;
+package engine.board;
 
-import piece.*;
+import engine.piece.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,7 +40,8 @@ public class Board {
                 board.append(index).append(' ');
                 index--;
             }
-            board.append(tile.toString());;
+            //engine.board.append(tile.index);
+            board.append(tile.toString());
             board.append(' ');
             file++;
         }
@@ -107,7 +108,6 @@ public class Board {
                     final Alliance alliance = Character.isUpperCase(symbol) ? Alliance.WHITE : Alliance.BLACK;
                     final Type type = pieces.get(Character.toLowerCase(symbol));
 
-                    System.out.println(type);
                     placePiece(type, alliance, tiles.get(index));
                     file++;
                 }
